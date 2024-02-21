@@ -1,0 +1,4 @@
+packages:
+  - 'main'
+  - 'sub-vue-cli-vue2'
+  - 'sub-vue-cli-vue3'

@@ -1,0 +1,33 @@
+{
+	"name": "qiankun-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"install": "npm-run-all -s install:*",
+		"Install:sub-vue-cli-vue2": "pnpm -C sub-vue-cli-vue2 install",
+		"install:sub-vue-cli-vue3": "pnpm -C sub-vue-cli-vue3 install",
+		"install:main": "pnpm -C main install",
+		"dev": "npm-run-all -p dev:*",
+		"dev:sub-vue-cli-vue2": "pnpm -C sub-vue-cli-vue2 run serve",
+		"dev:sub-vue-cli-vue3": "pnpm -C sub-vue-cli-vue3 run serve",
+		"dev:main": "pnpm -C main run dev",
+		"father": "father-build",
+		"build": "npm-run-all -p build:*",
+		"build:sub-vue-cli-vue2": "pnpm -C sub-vue-cli-vue2 run build",
+		"build:sub-vue-cli-vue3": "pnpm -C sub-vue-cli-vue3 run build",
+		"build:main": "pnpm -C main run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-plugin-vue": "^8.7.1",
+		"npm-run-all": "^4.1.5",
+		"vite-plugin-qiankun": "^1.0.15"
+	},
+	"dependencies": {
+		"qiankun": "^2.10.16"
+	}
+}
