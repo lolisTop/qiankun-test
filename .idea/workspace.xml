@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59848b6d-3212-468f-88b8-7253da97509a" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/micro-app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/router/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/store/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/store/modules/globalState.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/store/modules/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/view/about.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/view/home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ct2sLnsVZNmqcDDcs61G0642Cn" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/project/qiankun-test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "E:\\project\\qiankun-test\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "ts.external.directory.path": "E:\\project\\qiankun-test\\apps\\main\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\qiankun-test\apps" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="59848b6d-3212-468f-88b8-7253da97509a" name="更改" comment="" />
+      <created>1708916759492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708916759492</updated>
+      <workItem from="1708916760612" duration="3037000" />
+      <workItem from="1708934809644" duration="60000" />
+      <workItem from="1708994333980" duration="1435000" />
+      <workItem from="1709018117170" duration="51000" />
+      <workItem from="1709018174666" duration="685000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

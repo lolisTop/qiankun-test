@@ -4,12 +4,12 @@ console.log(import.meta.env);
 const microApps = [
 	{
 		name: 'sub-vue-cli-vue2',
-		entry: import.meta.env.VITE_APP_SUB_VUE2 as string,
+		entry: '//localhost:8080',
 		activeRule: '/sub-vue-cli-vue2'
 	},
 	{
 		name: 'sub-vue-cli-vue3',
-		entry: import.meta.env.VITE_APP_SUB_VUE3 as string,
+		entry: '//localhost:8081',
 		activeRule: '/sub-vue-cli-vue3'
 	}
 ];
