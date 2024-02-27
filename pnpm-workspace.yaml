@@ -1,5 +1,5 @@
 packages:
-  - 'main'
-  - 'sub-vue-cli-vue2'
-  - 'sub-vue-cli-vue3'
+  # all packages in subdirs of packages/ and components/
+  - packages/**
+  - apps/**
 recursive-install: false
