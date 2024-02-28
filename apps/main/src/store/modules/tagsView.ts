@@ -32,7 +32,7 @@ export const useTagsViewStore = defineStore('tagsView', {
     // 新增tag
     addVisitedView(view: RouteLocationNormalizedLoaded) {
       if (this.visitedViews.some((v) => v.path === view.path)) return
-      if (view.meta?.noTagsView) return
+      if (view.meta?.noTagsView && !view.meta?.isSubApp) return
       this.visitedViews.push(
         Object.assign({}, view, {
           title: view.meta?.title || 'no-name'

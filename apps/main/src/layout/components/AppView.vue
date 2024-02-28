@@ -2,8 +2,14 @@
 import { useTagsViewStore } from '@/store/modules/tagsView'
 import { useAppStore } from '@/store/modules/app'
 import { Footer } from '@/layout/components/Footer'
+import SubLayout from './SubLayout.vue'
 
 defineOptions({ name: 'AppView' })
+
+const routes = useRoute()
+
+// TODO 适配全局
+const showLayout = computed(() => routes.path.includes('sub'))
 
 const appStore = useAppStore()
 
@@ -67,6 +73,7 @@ provide('reload', reload)
         </keep-alive>
       </template>
     </router-view>
+    <sub-layout v-show="showLayout" />
   </section>
   <Footer v-if="footer" />
 </template>

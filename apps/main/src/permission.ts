@@ -59,7 +59,12 @@ const whiteList = [
 
 // 路由加载前
 router.beforeEach(async (to, from, next) => {
-  console.log('%c 📜: to, from ', 'font-size:16px;background-color:#7c59cd;color:white;', to, from)
+  console.log('%c ✉️: to ', 'font-size:16px;background-color:#9e2eba;color:white;', to)
+  console.log(
+    '%c ✉️: window.history.state ',
+    'font-size:16px;background-color:#9e2eba;color:white;',
+    window.history.state
+  )
   start()
   loadStart()
   if (getAccessToken()) {
@@ -70,6 +75,15 @@ router.beforeEach(async (to, from, next) => {
       const dictStore = useDictStoreWithOut()
       const userStore = useUserStoreWithOut()
       const permissionStore = usePermissionStoreWithOut()
+      // TODO 增加子系统白名单 (系统级别后退)
+      if (to.path.includes('/sub')) {
+        // Object.assign(window.history.state, { current: to.path, back: from.path })
+        // history.replaceState(
+        //   { ...history.state, current: to.path, back: from.path },
+        //   String(to?.name) || '',
+        //   to.path
+        // )
+      }
       if (!dictStore.getIsSetDict) {
         await dictStore.setDictMap()
       }

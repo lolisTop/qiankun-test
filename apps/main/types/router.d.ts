@@ -77,5 +77,6 @@ declare global {
     visible?: boolean
     parentId?: number
     alwaysShow?: boolean
+    isSubApp?: boolean
   }
 }

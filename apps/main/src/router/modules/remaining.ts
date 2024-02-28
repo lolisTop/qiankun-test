@@ -30,6 +30,8 @@ const { t } = useI18n()
  followAuth: '/dashboard'  跟随哪个路由进行权限过滤
 
  canTo: true               设置为true即使hidden为true，也依然可以进行路由跳转(默认 false)
+
+ isSubApp: false           设置为true即使noTagsView为true，也依然显示
  }
  **/
 const remainingRouter: AppRouteRecordRaw[] = [
@@ -71,42 +73,61 @@ const remainingRouter: AppRouteRecordRaw[] = [
     ]
   },
   {
-    path: '/sub',
-    alias: '/sub/',
-    component: () => import('@/views/MicroFrontendTesting/Index.vue'),
-    name: 'sub',
-    // redirect: '/sub/sub-vue-cli-vue2',
-    meta: {},
+    path: '/sub-vue-cli-vue2',
+    alias: '/sub-vue-cli-vue2/',
+    name: 'sub-vue-cli-vue2',
+    component: Layout,
+    redirect: '/sub-vue-cli-vue2/home',
+    meta: {
+      title: '微前端测试APP1'
+    },
     children: [
-      // {
-      //   path: '/sub/:path*',
-      //   name: 'sub',
-      //   component: () => import('@/views/MicroFrontendTesting/Index.vue'),
-      //   meta: {
-      //     hidden: true,
-      //     noTagsView: true,
-      //     breadcrumb: false,
-      //     noCache: true
-      //   }
-      // },
       {
-        path: 'sub-vue-cli-vue2',
-        alias: '/sub/sub-vue-cli-vue2',
-        component: () => import('@/views/MicroFrontendTesting/Index.vue'),
-        name: 'sub-vue-cli-vue2',
+        path: 'home',
+        name: 'sub-vue-cli-vue2-home',
         meta: {
-          title: t('router.microFrontendTesting'),
-          icon: 'ep:bicycle'
+          title: 'APP1 - home',
+          icon: 'ep:bicycle',
+          noCache: true
         }
       },
       {
-        path: 'sub-vue-cli-vue3',
-        alias: 'sub-vue-cli-vue3/',
-        component: () => import('@/views/MicroFrontendTesting/Index.vue'),
-        name: 'sub-vue-cli-vue3',
+        path: 'about',
+        name: 'sub-vue-cli-vue2-about',
         meta: {
-          title: t('router.microFrontendTesting'),
-          icon: 'ep:bicycle'
+          title: 'APP1 - about',
+          icon: 'ep:bicycle',
+          noCache: true
+        }
+      }
+    ]
+  },
+  {
+    path: '/sub-vue-cli-vue3',
+    alias: '/sub-vue-cli-vue3/',
+    name: 'sub-vue-cli-vue3',
+    component: Layout,
+    redirect: '/sub-vue-cli-vue3/home',
+    meta: {
+      title: '微前端测试APP2'
+    },
+    children: [
+      {
+        path: 'home',
+        name: 'sub-vue-cli-vue3-home',
+        meta: {
+          title: 'APP2 - home',
+          icon: 'ep:bicycle',
+          noCache: true
+        }
+      },
+      {
+        path: 'about',
+        name: 'sub-vue-cli-vue3-about',
+        meta: {
+          title: 'APP2 - about',
+          icon: 'ep:bicycle',
+          noCache: true
         }
       }
     ]
