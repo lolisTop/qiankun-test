@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>sub-vue-cli-vue2</div>
+    <!-- <a @click="$router.push('/sub-vue-cli-vue3/about')">project3/Home</a> -->
     <router-link to="/home">
       Home
     </router-link>

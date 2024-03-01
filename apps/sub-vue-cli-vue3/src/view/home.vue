@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import utils from '../../../../packages/utils'
+console.log("%c ⚙️: utils ", "font-size:16px;background-color:#7a1fd0;color:white;", utils)
 export default {
 	// eslint-disable-next-line vue/multi-word-component-names
 	name: 'Home',

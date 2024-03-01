@@ -41,7 +41,7 @@ onMounted(() => {
     start({
       prefetch: 'all',
       sandbox: {
-        strictStyleIsolation: true,
+        // strictStyleIsolation: true,
         experimentalStyleIsolation: true
       }
     })
