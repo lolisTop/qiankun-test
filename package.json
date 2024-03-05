@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "npm-run-all -p dev:*",
-		"dev:sub-vue-cli-vue2": "pnpm -C apps/sub-vue-cli-vue2 run serve",
-		"dev:sub-vue-cli-vue3": "pnpm -C apps/sub-vue-cli-vue3 run serve",
+		"dev:sub-project1": "pnpm -C apps/project1-vue3-ts run dev",
+		"dev:sub-project2": "pnpm -C apps/project2-vue3-ts run dev",
 		"dev:main": "pnpm -C apps/main run dev",
 		"build": "npm-run-all build:* && bash ./.scripts/bundle.sh",
-		"build:sub-vue-cli-vue2": "pnpm -C apps/sub-vue-cli-vue2 run build",
-		"build:sub-vue-cli-vue3": "pnpm -C apps/sub-vue-cli-vue3 run build",
+		"build:sub-project1": "pnpm -C apps/project1-vue3-ts run build",
+		"build:sub-project2": "pnpm -C apps/project2-vue3-ts run build",
 		"build:main": "pnpm -C apps/main run build"
 	},
 	"keywords": [],

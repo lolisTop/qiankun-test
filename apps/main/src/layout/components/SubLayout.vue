@@ -1,27 +1,42 @@
 <script lang="ts" setup>
 // import { getActiveRule } from '@/micro-app'
-import { registerMicroApps, start } from 'qiankun'
+import { registerMicroApps, start, initGlobalState, MicroAppStateActions } from 'qiankun'
 import type { RegistrableApp } from 'qiankun'
+import { store } from '@/store'
+import { testObj } from '@common/utils'
+import mitt from 'mitt'
+const emitter = mitt()
 
 onMounted(() => {
   nextTick(() => {
     const microApps = [
       {
-        name: 'sub-vue-cli-vue2',
+        name: 'sub-project1',
         entry: '//localhost:8080',
-        activeRule: '/sub-vue-cli-vue2'
+        activeRule: '/sub-project1/'
       },
       {
-        name: 'sub-vue-cli-vue3',
+        name: 'sub-project2',
         entry: '//localhost:8081',
-        activeRule: '/sub-vue-cli-vue3'
+        activeRule: '/sub-project2'
       }
     ]
     const subApps = microApps.map<RegistrableApp<any>>((item) => ({
       ...item,
       container: '#subApp-viewport', // 子应用挂载的div
       props: {
-        routerBase: item.activeRule // 下发基础路由
+        routerBase: item.activeRule, // 下发基础路由
+        defaultState: store.state,
+        onStoreChange: (listener) =>
+          watch(
+            () => store.state,
+            (val) => {
+              listener(val)
+            },
+            {
+              deep: true
+            }
+          )
       }
     }))
     registerMicroApps(subApps, {
@@ -41,7 +56,6 @@ onMounted(() => {
     start({
       prefetch: 'all',
       sandbox: {
-        // strictStyleIsolation: true,
         experimentalStyleIsolation: true
       }
     })

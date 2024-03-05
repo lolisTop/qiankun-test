@@ -5,14 +5,14 @@ export const getActiveRule = (hash) => (location) => location.hash.startsWith(ha
 
 const microApps = [
   {
-    name: 'sub-vue-cli-vue2',
+    name: 'sub-project1',
     entry: '//localhost:8080',
-    activeRule: '/sub/sub-vue-cli-vue2'
+    activeRule: '/sub/sub-project1'
   },
   {
-    name: 'sub-vue-cli-vue3',
+    name: 'sub-project2',
     entry: '//localhost:8081',
-    activeRule: '/sub/sub-vue-cli-vue3'
+    activeRule: '/sub/sub-project2'
   }
 ]
 const subApps = microApps.map<RegistrableApp<any>>((item) => ({

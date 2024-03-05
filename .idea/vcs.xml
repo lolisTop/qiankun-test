@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/sub-vue-cli-vue2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/apps/sub-vue-cli-vue3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/apps/sub-project1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/apps/sub-project2" vcs="Git" />
   </component>
 </project>

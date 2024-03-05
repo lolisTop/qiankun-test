@@ -73,18 +73,18 @@ const remainingRouter: AppRouteRecordRaw[] = [
     ]
   },
   {
-    path: '/sub-vue-cli-vue2',
-    alias: '/sub-vue-cli-vue2/',
-    name: 'sub-vue-cli-vue2',
-    component: Layout,
-    redirect: '/sub-vue-cli-vue2/home',
+    path: '/sub-project1',
+    alias: '/sub-project1/',
+    name: 'sub-project1',
+    redirect: '/sub-project1/home',
     meta: {
       title: '微前端测试APP1'
     },
     children: [
       {
         path: 'home',
-        name: 'sub-vue-cli-vue2-home',
+        name: 'sub-project1-home',
+        component: Layout,
         meta: {
           title: 'APP1 - home',
           icon: 'ep:bicycle',
@@ -93,7 +93,8 @@ const remainingRouter: AppRouteRecordRaw[] = [
       },
       {
         path: 'about',
-        name: 'sub-vue-cli-vue2-about',
+        name: 'sub-project1-about',
+        component: Layout,
         meta: {
           title: 'APP1 - about',
           icon: 'ep:bicycle',
@@ -103,18 +104,18 @@ const remainingRouter: AppRouteRecordRaw[] = [
     ]
   },
   {
-    path: '/sub-vue-cli-vue3',
-    alias: '/sub-vue-cli-vue3/',
-    name: 'sub-vue-cli-vue3',
-    component: Layout,
-    redirect: '/sub-vue-cli-vue3/home',
+    path: '/sub-project2',
+    alias: '/sub-project2/',
+    name: 'sub-project2',
+    redirect: '/sub-project2/home',
     meta: {
       title: '微前端测试APP2'
     },
     children: [
       {
         path: 'home',
-        name: 'sub-vue-cli-vue3-home',
+        name: 'sub-project2-home',
+        component: Layout,
         meta: {
           title: 'APP2 - home',
           icon: 'ep:bicycle',
@@ -123,7 +124,8 @@ const remainingRouter: AppRouteRecordRaw[] = [
       },
       {
         path: 'about',
-        name: 'sub-vue-cli-vue3-about',
+        name: 'sub-project2-about',
+        component: Layout,
         meta: {
           title: 'APP2 - about',
           icon: 'ep:bicycle',
