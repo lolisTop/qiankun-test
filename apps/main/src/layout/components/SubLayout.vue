@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-// import { getActiveRule } from '@/micro-app'
-import { registerMicroApps, start, initGlobalState, MicroAppStateActions } from 'qiankun'
+import { registerMicroApps, start } from 'qiankun'
 import type { RegistrableApp } from 'qiankun'
 import { store } from '@/store'
-import { testObj } from '@common/utils'
-import mitt from 'mitt'
-const emitter = mitt()
-
+import commonStore from '@common/store'
+import { useAppStore } from '@/store/modules/app'
+const appStore = useAppStore()
 onMounted(() => {
   nextTick(() => {
     const microApps = [
@@ -27,16 +25,7 @@ onMounted(() => {
       props: {
         routerBase: item.activeRule, // 下发基础路由
         defaultState: store.state,
-        onStoreChange: (listener) =>
-          watch(
-            () => store.state,
-            (val) => {
-              listener(val)
-            },
-            {
-              deep: true
-            }
-          )
+        onStoreChange: commonStore.eventDelegation
       }
     }))
     registerMicroApps(subApps, {
@@ -48,6 +37,14 @@ onMounted(() => {
       },
       afterMount: async (app) => {
         console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name)
+        // TEST 主应用传子应用状态
+        const data = {
+          setIsDark: (isDark) => {
+            appStore.setIsDark(isDark)
+            commonStore.mainToSub({ appStore })
+          }
+        }
+        commonStore.mainToSub(data)
       },
       afterUnmount: async (app) => {
         console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name)

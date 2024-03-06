@@ -13,6 +13,8 @@ import router, { setupRouter } from './router/index'
 
 import { useGlobalState } from '@/store/modules/global'
 
+import commonStore from '@common/store'
+
 let root: AppRoot
 
 async function render(props: any = {}) {
@@ -33,11 +35,7 @@ async function render(props: any = {}) {
   globalState.state = defaultState
 
   onStoreChange((state) => {
-    console.log(
-      '%c 😪: render -> state ',
-      'font-size:16px;background-color:#88584b;color:white;',
-      state
-    )
+    commonStore.addState('main', { ...commonStore.state.value.main, ...state })
   })
 }
 

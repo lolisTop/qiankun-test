@@ -1,33 +1,24 @@
 <template>
   <div> App1 - Home </div>
-  <div>{{ globalState.state }}</div>
+  <div>{{ commonStoreC }}</div>
   <!-- <div>{{ stateC.state }}</div> -->
+  <div style="cursor: pointer" @click="mainCommand">调用主应用方法</div>
 </template>
 
 <script lang="ts" setup>
-// import utils, { testObj } from '@common/utils'
-// import useGlobalState from '@common/store'
-import { useGlobalState } from '@/store/modules/global'
-const globalState = useGlobalState()
-console.log(
-  '%c 🇨🇿: globalState ',
-  'font-size:16px;background-color:#c6099b;color:white;',
-  globalState
-)
-// let index: number = Number((globalState.state.name || '').match(/\-foo(\d+)/)?.[1]) || 0
-// let timer
-// if (typeof index === 'number') {
-//   timer = setInterval(() => {
-//     console.log('done')
+import commonStore from '@common/store'
+const commonStoreC = ref()
+const isDark = ref(false)
+const mainCommand = () => {
+  isDark.value = !isDark.value
+  commonStore.state.value.main.setIsDark(isDark.value)
+}
 
-//     index++
-//     globalState.state.name = `home-foo${index}`
-//   }, 1000)
-// }
-
-onUnmounted(() => {
-  // clearInterval(timer)
+watchEffect(() => {
+  commonStoreC.value = commonStore.state
 })
+
+onUnmounted(() => {})
 </script>
 
 <style scoped></style>

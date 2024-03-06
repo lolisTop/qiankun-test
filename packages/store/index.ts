@@ -1,17 +1,30 @@
+import { ref } from 'vue'
+import mitt from 'mitt'
+const emitter = mitt()
 class UseGlobalState {
   constructor() {}
-  state: Record<string, any> = {}
+  state = ref<Record<string, any>>({})
   isInit: boolean = false
-  setState(key: string, value: any) {
-    // debugger
-    this.state[key] = value
+  addState(key: string, value: any) {
+    this.state.value[key] = value
   }
   getState(key: string) {
-    return this.state[key]
+    return this.state.value[key]
   }
   register(state: typeof this.state) {
     // debugger
-    this.state = state
+    this.state.value = state
+  }
+  mainToSub(data: Record<string, any>) {
+    emitter.emit('foo', data)
+  }
+  subToMain(data: Record<string, any>) {
+    emitter.emit('bar', data)
+  }
+  eventDelegation = (subListener: Function) => {
+    emitter.on('foo', (data: Record<string, any>) => {
+      subListener(data)
+    })
   }
 }
 

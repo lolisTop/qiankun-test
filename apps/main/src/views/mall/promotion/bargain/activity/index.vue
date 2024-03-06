@@ -204,7 +204,7 @@ const handleClose = async (id: number) => {
     // 关闭的二次确认
     await message.confirm('确认关闭该砍价活动吗？')
     // 发起关闭
-    await BargainActivityApi.closeSeckillActivity(id)
+    // await BargainActivityApi.closeSeckillActivity(id)
     message.success('关闭成功')
     // 刷新列表
     await getList()
