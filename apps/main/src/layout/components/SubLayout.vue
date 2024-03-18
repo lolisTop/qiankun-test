@@ -5,6 +5,7 @@ import { store } from '@/store'
 import commonStore from '@common/store'
 import { useAppStore } from '@/store/modules/app'
 const appStore = useAppStore()
+const router = useRouter()
 onMounted(() => {
   nextTick(() => {
     const microApps = [
@@ -25,7 +26,8 @@ onMounted(() => {
       props: {
         routerBase: item.activeRule, // 下发基础路由
         defaultState: store.state,
-        onStoreChange: commonStore.eventDelegation
+        onStoreChange: commonStore.eventDelegation,
+        faRouter: router
       }
     }))
     registerMicroApps(subApps, {

@@ -1,35 +1,40 @@
 {
-	"name": "qiankun-test",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"dev": "npm-run-all -p dev:*",
-		"dev:sub-project1": "pnpm -C apps/project1-vue3-ts run dev",
-		"dev:sub-project2": "pnpm -C apps/project2-vue3-ts run dev",
-		"dev:main": "pnpm -C apps/main run dev",
-		"build": "npm-run-all build:* && bash ./.scripts/bundle.sh",
-		"build:sub-project1": "pnpm -C apps/project1-vue3-ts run build",
-		"build:sub-project2": "pnpm -C apps/project2-vue3-ts run build",
-		"build:main": "pnpm -C apps/main run build"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
+  "name": "qiankun-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:sub-project1": "pnpm -C apps/project1-vue3-ts run dev",
+    "dev:sub-project2": "pnpm -C apps/project2-vue3-ts run dev",
+    "dev:main": "pnpm -C apps/main run dev",
+    "build": "npm-run-all build:* && bash ./.scripts/bundle.sh && pnpm run local-server",
+    "build:sub-project1": "pnpm -C apps/project1-vue3-ts run build:dev",
+    "build:sub-project2": "pnpm -C apps/project2-vue3-ts run build:dev",
+    "build:main": "pnpm -C apps/main run build:dev",
+    "local-server": "npm-run-all -p local-server:*",
+    "local-server:main": "pnpm http-server dist/main --proxy http://0.0.0.0:80? --cors=* -o -p 80",
+    "local-server:sub-project1": "pnpm http-server dist/sub-project1 --proxy http://0.0.0.0:8080? --cors=* -p 8080",
+    "local-server:sub-project2": "pnpm http-server dist/sub-project2 --proxy http://0.0.0.0:8081? --cors=* -p 8081"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
-		"eslint": "^8.53.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-define-config": "^1.24.1",
-		"eslint-plugin-prettier": "^5.0.1",
-		"eslint-plugin-vue": "^9.18.1",
-		"npm-run-all": "^4.1.5",
-		"prettier": "^2.8.4",
-		"typescript": "5.2.2",
-		"vite-plugin-qiankun": "^1.0.15"
-	},
-	"dependencies": {
-		"qiankun": "^2.10.16"
-	}
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-define-config": "^1.24.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.4",
+    "typescript": "5.2.2",
+    "vite-plugin-qiankun": "^1.0.15",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "qiankun": "^2.10.16"
+  }
 }
